@@ -1,11 +1,13 @@
+import React from "react";
 import Head from "next/head";
+import Header from "./header";
 
 const Layout = () => (
   <main>
     <Head>
       <title>Gundla gårdscafé</title>
     </Head>
-    <h1>Gundla gårdscafé</h1>
+    <Header></Header>
   </main>
 );
 
