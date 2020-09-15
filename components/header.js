@@ -27,7 +27,6 @@ const Header = () => (
     </h2>
     <h6>Ekologiskt • Vegetariskt • Musik • Sommar</h6>
     <MenuButton></MenuButton>
-    <Nav></Nav>
   </StyledHeader>
 );
 

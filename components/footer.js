@@ -7,12 +7,16 @@ const StyledFooter = styled.footer`
   margin: 0;
   padding: 3vh 5vw;
   background-color: #4e746c;
+  color: #fffcf1;
   width: 100vw;
   height: 474px;
+
+  ul {
+    list-style: none;
+  }
 `;
 
 function Footer({ info }) {
-  console.log(info);
   return (
     <StyledFooter>
       <ul></ul>
