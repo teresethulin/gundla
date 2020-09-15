@@ -11,24 +11,13 @@ const StyledFooter = styled.footer`
   height: 474px;
 `;
 
-function Footer({ json }) {
-  console.log(json);
+function Footer({ info }) {
+  console.log(info);
   return (
     <StyledFooter>
-      <ul></ul>
+      <ul>{info.email}</ul>
     </StyledFooter>
   );
-}
-
-export async function getStaticProps() {
-  const res = await fetch("https://gundla-server.herokuapp.com/footer");
-  const json = await res.json();
-
-  return {
-    props: {
-      json,
-    },
-  };
 }
 
 export default Footer;

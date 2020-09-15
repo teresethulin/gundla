@@ -25,8 +25,8 @@ const Header = () => (
           </Link>
         </li>
         <li>
-          <Link href="/event" as="/event">
-            <a>Event</a>
+          <Link href="/events" as="/events">
+            <a>Events</a>
           </Link>
         </li>
         <li>
