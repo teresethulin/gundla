@@ -1,3 +1,5 @@
+import { getAllPosts } from "../lib/api";
+
 function Event({ events }) {
   console.log(events);
   return (
@@ -16,14 +18,11 @@ function Event({ events }) {
   );
 }
 
-export async function getStaticProps() {
-  const res = await fetch("https://gundla-server.herokuapp.com/events");
-  const json = await res.json();
+export async function getStaticProps(context) {
+  const events = await getAllPosts();
 
   return {
-    props: {
-      events: json,
-    },
+    props: { events },
   };
 }
 
