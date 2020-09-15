@@ -3,13 +3,13 @@ import Head from "next/head";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-const Layout = () => (
+const Layout = ({ info }) => (
   <main>
     <Head>
       <title>Gundla gårdscafé</title>
     </Head>
     <Header></Header>
-    <Footer></Footer>
+    <Footer info={info}></Footer>
   </main>
 );
 
