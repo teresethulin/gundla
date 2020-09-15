@@ -16,7 +16,8 @@ const StyledFooter = styled.footer`
   }
 `;
 
-function Footer({ info }) {
+function Footer({ json }) {
+  console.log(json);
   return (
     <StyledFooter>
       <ul></ul>
@@ -30,7 +31,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      info: json,
+      json,
     },
   };
 }
