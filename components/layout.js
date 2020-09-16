@@ -6,6 +6,10 @@ import Footer from "../components/footer";
 const Layout = ({ info }) => (
   <main>
     <Head>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Barlow&display=swap"
+        rel="stylesheet"
+      ></link>
       <title>Gundla gårdscafé</title>
     </Head>
     <Header></Header>

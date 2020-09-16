@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const List = styled.ul`
   margin: 0;
-  padding: 0px 24px;
+  padding: 0px 12px;
 `;
 
 export default function Events({ events }) {
