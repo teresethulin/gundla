@@ -12,8 +12,10 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
 }
 
 :root {
-  --main-yellow: #fffcf1;
+  --main-bg-yellow: #fffcf1;
+  --main-bg-green: #4e746c;
 }
