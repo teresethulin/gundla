@@ -1,26 +1,37 @@
-import { getAllPosts } from "../../lib/api";
-import Event from "../../components/Event";
+import { getData } from "../../lib/api";
+import Event from "../../components/events/Event";
+import GreenPost from "../../components/post/GreenPost";
+import EventInfo from "../../components/events/EventInfo";
 import styled from "styled-components";
 
-const List = styled.ul`
+const Container = styled.ul`
   margin: 0;
   padding: 0px 12px;
 `;
+const List = styled.ul`
+  margin: 0;
+  padding: 0;
+`;
 
-export default function Events({ events }) {
+export default function Events({ events, post }) {
   return (
-    <List>
-      {events.map((event) => (
-        <Event key={event.id} event={event} />
-      ))}
-    </List>
+    <Container>
+      <GreenPost post={post[0]} />
+      <EventInfo posts={post} />
+      <List>
+        {events.map((event) => (
+          <Event key={event.id} event={event} />
+        ))}
+      </List>
+    </Container>
   );
 }
 
-export async function getStaticProps(context) {
-  const events = await getAllPosts();
-
+export async function getStaticProps() {
+  const events = await getData("events");
+  const { post } = await getData("event-page");
   return {
-    props: { events },
+    props: { events, post },
+    revalidate: 30,
   };
 }
