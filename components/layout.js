@@ -7,7 +7,7 @@ const Layout = ({ info }) => (
   <main>
     <Head>
       <link
-        href="https://fonts.googleapis.com/css2?family=Barlow&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Barlow&family=Harmattan:wght@400;700&display=swap"
         rel="stylesheet"
       ></link>
       <title>Gundla gårdscafé</title>

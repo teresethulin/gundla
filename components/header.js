@@ -20,11 +20,12 @@ const StyledHeader = styled.header`
 
 const Header = () => (
   <StyledHeader>
-    <h2>
-      <Link href="/">
-        <a>Gundla gårdscafé</a>
-      </Link>
-    </h2>
+    <Link href="/">
+      <a>
+        <h1>Gundla gårdscafé</h1>
+      </a>
+    </Link>
+
     <h6>Ekologiskt • Vegetariskt • Musik • Sommar</h6>
     <MenuButton></MenuButton>
   </StyledHeader>

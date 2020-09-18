@@ -53,6 +53,9 @@ const StyledFooterUl = styled.ul`
 
   a {
     text-decoration: underline;
+    font-family: "Harmattan";
+    font-weight: 400;
+    letter-spacing: 0.01em;
   }
 `;
 
@@ -60,7 +63,7 @@ const Footer = () => (
   <StyledFooter>
     <StyledFooterButtonContainer>
       <StyledFooterButton>Kontakta oss (Ring)</StyledFooterButton>
-      <StyledFooterButton>mail</StyledFooterButton>
+      <StyledFooterButton>Kontakta oss (Mail)</StyledFooterButton>
       <StyledFooterButton>Hitta hit (Google Maps)</StyledFooterButton>
     </StyledFooterButtonContainer>
     <StyledFooterLowerWrapper>
@@ -71,8 +74,12 @@ const Footer = () => (
         <li>Söndag 12-16</li>
       </StyledFooterUl>
       <StyledFooterUl>
-        <li>Instagram</li>
-        <li>Facebook</li>
+        <li>
+          <a href="">Instagram</a>
+        </li>
+        <li>
+          <a href="">Facebook</a>
+        </li>
       </StyledFooterUl>
     </StyledFooterLowerWrapper>
   </StyledFooter>
