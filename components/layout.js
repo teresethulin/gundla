@@ -3,13 +3,17 @@ import Head from "next/head";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
-const Layout = () => (
+const Layout = ({ info }) => (
   <main>
     <Head>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Barlow&display=swap"
+        rel="stylesheet"
+      ></link>
       <title>Gundla gårdscafé</title>
     </Head>
     <Header></Header>
-    <Footer></Footer>
+    <Footer info={info}></Footer>
   </main>
 );
 

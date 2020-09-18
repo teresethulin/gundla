@@ -60,7 +60,7 @@ const Footer = () => (
   <StyledFooter>
     <StyledFooterButtonContainer>
       <StyledFooterButton>Kontakta oss (Ring)</StyledFooterButton>
-      <StyledFooterButton>Kontakta oss (Mail)</StyledFooterButton>
+      <StyledFooterButton>mail</StyledFooterButton>
       <StyledFooterButton>Hitta hit (Google Maps)</StyledFooterButton>
     </StyledFooterButtonContainer>
     <StyledFooterLowerWrapper>

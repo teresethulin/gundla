@@ -2,9 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  height: auto;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Barlow", sans-serif;
 }
 
 a {
@@ -14,4 +12,10 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: "Barlow", sans-serif;
+}
+
+:root {
+  --main-bg-yellow: #fffcf1;
+  --main-bg-green: #4e746c;
 }
