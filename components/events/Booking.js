@@ -1,32 +1,20 @@
-import styled from "styled-components";
-import Form from "./Form";
+import BookingForm from "./BookingForm";
 
-const Container = styled.div`
-  width: 100%;
-  background-color: #fffcf1;
-  padding: 32px 22px;
-  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.16);
-`;
-const FlexContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+import { FlexContainer, ContainerBooking } from "./style";
 
-const DateText = styled.p``;
-
-export default function BookingForm({ event }) {
+export default function Booking({ event }) {
   return (
-    <Container>
+    <ContainerBooking>
       <h2>Bokingsförfrågan</h2>
-      <p>{fixCategoryName(event.category)}</p>
+      <p style={{ marginBottom: 5, marginTop: 15 }}>
+        {fixCategoryName(event.category)}
+      </p>
       <FlexContainer>
-        <h3>{event.title}</h3>
-        <DateText>{dateCheck(event.date)}</DateText>
+        <h3 style={{ margin: 0 }}>{event.title}</h3>
+        <p style={{ margin: 0 }}>{dateCheck(event.date)}</p>
       </FlexContainer>
-      <Form />
-    </Container>
+      <BookingForm />
+    </ContainerBooking>
   );
 }
 
