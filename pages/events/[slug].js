@@ -1,10 +1,17 @@
 import { getData } from "../../lib/api";
+import styled from "styled-components";
+import Booking from "../../components/events/Booking";
+
+const Container = styled.ul`
+  margin: 0;
+  padding: 0px 12px;
+`;
 
 export default function BookEvent({ event }) {
   return (
-    <div>
-      <h1>{event.title}</h1>
-    </div>
+    <Container>
+      <Booking event={event} />
+    </Container>
   );
 }
 
@@ -18,11 +25,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  console.log(params.slug);
-  // params contains the post `id`.
-  // If the route is like /posts/1, then params.id is 1
   const event = await getData(`events?slug=${params.slug}`);
 
-  // Pass post data to the page via props
   return { props: { event: event[0] } };
 }
