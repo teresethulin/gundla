@@ -17,7 +17,8 @@ const StyledButton = styled.div`
 
 const MenuButton = () => (
   <StyledButton>
-    Meny <Burger></Burger>
+    <span>Meny</span>
+    <Burger></Burger>
   </StyledButton>
 );
 
