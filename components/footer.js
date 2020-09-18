@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   margin: 0;
   padding: 3vh 5vw;
   background-color: #4e746c;
@@ -59,8 +59,9 @@ const StyledFooterUl = styled.ul`
   }
 `;
 
-const Footer = () => (
+const Footer = ({ info }) => (
   <StyledFooter>
+    {console.log(info)}
     <StyledFooterButtonContainer>
       <StyledFooterButton>
         <a href="">Kontakta oss (Ring)</a>

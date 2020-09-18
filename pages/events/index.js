@@ -5,8 +5,7 @@ import EventInfo from "../../components/events/EventInfo";
 import styled from "styled-components";
 
 const Container = styled.ul`
-  margin: 0;
-  padding: 0px 12px;
+  padding: 0 0;
 `;
 const List = styled.ul`
   margin: 0;

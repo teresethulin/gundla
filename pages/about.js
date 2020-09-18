@@ -1,5 +1,5 @@
 function About() {
-  return <div>Om oss</div>;
+  return <h1>Om oss</h1>;
 }
 
 export default About;
