@@ -1,5 +1,11 @@
+import Layout from "../components/layout";
+
 function Menu() {
-  return <div>Meny</div>;
+  return (
+    <Layout pageTitle="Meny">
+      <h1>Meny</h1>
+    </Layout>
+  );
 }
 
 export default Menu;
