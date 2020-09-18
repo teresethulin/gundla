@@ -1,5 +1,11 @@
+import Layout from "../components/layout";
+
 function About() {
-  return <h1>Om oss</h1>;
+  return (
+    <Layout pageTitle="Om oss">
+      <h1>Om oss</h1>
+    </Layout>
+  );
 }
 
 export default About;

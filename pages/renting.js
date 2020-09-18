@@ -1,5 +1,11 @@
+import Layout from "../components/layout";
+
 function Renting() {
-  return <div>Fest / Bröllop</div>;
+  return (
+    <Layout pageTitle="Fest / Bröllop">
+      <h1>Fest / Bröllop</h1>
+    </Layout>
+  );
 }
 
 export default Renting;

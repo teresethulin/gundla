@@ -26,7 +26,7 @@ const Nav = () => (
   <StyledNav>
     <ul>
       <li>
-        <Link href="/about" as="/about">
+        <Link href="/about" as="/omoss">
           <a>Om oss</a>
         </Link>
       </li>
