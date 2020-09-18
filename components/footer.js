@@ -62,9 +62,15 @@ const StyledFooterUl = styled.ul`
 const Footer = () => (
   <StyledFooter>
     <StyledFooterButtonContainer>
-      <StyledFooterButton>Kontakta oss (Ring)</StyledFooterButton>
-      <StyledFooterButton>Kontakta oss (Mail)</StyledFooterButton>
-      <StyledFooterButton>Hitta hit (Google Maps)</StyledFooterButton>
+      <StyledFooterButton>
+        <a href="">Kontakta oss (Ring)</a>
+      </StyledFooterButton>
+      <StyledFooterButton>
+        <a href="">Kontakta oss (Mail)</a>
+      </StyledFooterButton>
+      <StyledFooterButton>
+        <a href="">Hitta hit (Google Maps)</a>
+      </StyledFooterButton>
     </StyledFooterButtonContainer>
     <StyledFooterLowerWrapper>
       <StyledFooterUl>
