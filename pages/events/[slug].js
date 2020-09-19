@@ -1,5 +1,6 @@
 import { getData } from "../../lib/api";
 import styled from "styled-components";
+import Layout from "../../components/layout";
 import Booking from "../../components/events/Booking";
 
 const Container = styled.ul`
@@ -9,9 +10,11 @@ const Container = styled.ul`
 
 export default function BookEvent({ event }) {
   return (
-    <Container>
-      <Booking event={event} />
-    </Container>
+    <Layout pageTitle={event.slug}>
+      <Container>
+        <Booking event={event} />
+      </Container>
+    </Layout>
   );
 }
 
