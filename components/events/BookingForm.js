@@ -1,7 +1,8 @@
 import { Formik, Form } from "formik";
 
 import { SignupSchema } from "./Validation";
-import { ContainerInput, Label, Button, Input } from "./style";
+import { AxiosReq } from "./AxiosReq";
+import { ContainerInput, Label, Button, Input, ErrorMessage } from "./style";
 
 export default function BookingForm() {
   return (
@@ -18,6 +19,7 @@ export default function BookingForm() {
         onSubmit={(data, { setSubmitting, resetForm }) => {
           setSubmitting(true);
           console.log(data);
+          // AxiosReq(data);
           setSubmitting(false);
           resetForm();
         }}
@@ -27,19 +29,25 @@ export default function BookingForm() {
             <ContainerInput>
               <Label htmlFor="name">Namn*</Label>
               <Input placeholder="Förnamn Efternamn" name="name" type="text" />
-              {errors.name && touched.name ? <div>{errors.name}</div> : null}
+              {errors.name && touched.name ? (
+                <ErrorMessage>{errors.name}</ErrorMessage>
+              ) : null}
             </ContainerInput>
 
             <ContainerInput>
               <Label htmlFor="phone">Telefonnummer*</Label>
               <Input placeholder="+46" name="phone" type="number" as={Input} />
-              {errors.phone && touched.phone ? <div>{errors.phone}</div> : null}
+              {errors.phone && touched.phone ? (
+                <ErrorMessage>{errors.phone}</ErrorMessage>
+              ) : null}
             </ContainerInput>
 
             <ContainerInput>
               <Label htmlFor="mail">Mail*</Label>
               <Input placeholder="Din mailadress" name="mail" type="email" />
-              {errors.mail && touched.mail ? <div>{errors.mail}</div> : null}
+              {errors.mail && touched.mail ? (
+                <ErrorMessage>{errors.mail}</ErrorMessage>
+              ) : null}
             </ContainerInput>
 
             <ContainerInput>

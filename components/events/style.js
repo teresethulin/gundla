@@ -46,6 +46,11 @@ export const Input = styled(Field)`
   }
 `;
 
+export const ErrorMessage = styled.p`
+  font-size: 14px;
+  margin-top: 5px;
+`;
+
 // eventInfo.js
 export const ContainerInfo = styled.div`
   width: 100%;
