@@ -2,7 +2,11 @@ import Layout from "../components/layout";
 import { getData } from "../lib/api";
 
 export default function Home({ info }) {
-  return <h1>Välkommen</h1>;
+  return (
+    <Layout pageTitle="">
+      <h1>Välkommen</h1>
+    </Layout>
+  );
 }
 
 export async function getStaticProps() {
