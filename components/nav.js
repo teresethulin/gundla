@@ -5,11 +5,15 @@ const StyledNav = styled.nav`
   text-align: center;
   text-transform: none;
   height: 100vh;
-  width: 50vw;
-  background-color: wheat;
+  width: ${({ open }) => (open ? "100vw" : "0")};
   top: 0;
+  right: 0;
+  overflow: hidden;
+  transition: 0.4s;
+  padding: ${({ open }) => (open ? "0 5vw" : "0")};
   position: absolute;
-  z-index: 15;
+  z-index: -1;
+  background-color: #fcfcfc;
 
   ul {
     list-style: none;

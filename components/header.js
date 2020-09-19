@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styled from "styled-components";
-import Nav from "../components/nav";
-import MenuButton from "../components/menubutton";
+import Menu from "../components/menu";
 
 const StyledHeader = styled.header`
   display: flex;
@@ -27,7 +26,7 @@ const Header = () => (
     </Link>
 
     <h6>Ekologiskt • Vegetariskt • Musik • Sommar</h6>
-    <MenuButton></MenuButton>
+    <Menu></Menu>
   </StyledHeader>
 );
 
