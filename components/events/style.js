@@ -1,13 +1,14 @@
 import styled from "styled-components";
 import { Field } from "formik";
+import { animated } from "react-spring";
 
 // Booking.js
 export const ContainerBooking = styled.div`
   width: 100%;
-  background-color: #fffcf1;
+  background-color: var(--main-bg-yellow);
   padding: 32px 22px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16), 2px 2px 0px rgba(0, 0, 0, 0.16);
-  margin: 60px 0px;
+  margin: 30px 0px;
 `;
 export const FlexContainer = styled.div`
   width: 100%;
@@ -56,7 +57,7 @@ export const ContainerInfo = styled.div`
   width: 100%;
   padding: 32px 22px;
   margin: 12px 0px;
-  background-color: #fffcf1;
+  background-color: var(--main-bg-yellow);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.16);
 `;
 export const TitleInfo = styled.h3`
@@ -75,7 +76,7 @@ export const CardEvent = styled.div`
   width: 100%;
   padding: 32px 22px;
   margin: 12px 0px;
-  background-color: #fffcf1;
+  background-color: var(--main-bg-yellow);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.16);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -107,4 +108,14 @@ export const ButtonEvent = styled.button`
   border: 1px solid #000000;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.16);
   justify-self: end;
+`;
+
+// Notification
+export const ContainerNotis = styled(animated.div)`
+  width: 100%;
+  background-color: var(--main-bg-green);
+  color: var(--main-bg-yellow);
+  padding: 12px 22px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16), 2px 2px 0px rgba(0, 0, 0, 0.16);
+  margin: 20px 0px;
 `;
