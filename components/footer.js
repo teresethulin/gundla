@@ -61,7 +61,6 @@ const StyledFooterUl = styled.ul`
 
 const Footer = ({ info }) => (
   <StyledFooter>
-    {console.log(info)}
     <StyledFooterButtonContainer>
       <StyledFooterButton>
         <a href="">Kontakta oss (Ring)</a>
