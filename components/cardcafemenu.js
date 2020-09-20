@@ -20,23 +20,13 @@ const StyledCardCafeMenu = styled.div`
   }
 
   p {
-    margin: 0;
+    margin: 0 0 5vh;
   }
 `;
 
 export default function CardCafeMenu({ menuCategories }) {
   return (
     <StyledCardCafeMenu>
-      <h1>{menuCategories[0].title}</h1>
-
-      {menuCategories[0].menu_items.map((item) => (
-        <div key={item.id} item={item}>
-          <div className="menu-item-title-wrapper">
-            <h3>{item.title}</h3>
-            <h3>{item.price}</h3>
-          </div>
-        </div>
-      ))}
       <h1>{menuCategories[1].title}</h1>
       {menuCategories[1].menu_items.map((item) => (
         <div key={item.id} item={item}>
@@ -45,6 +35,15 @@ export default function CardCafeMenu({ menuCategories }) {
             <h3>{item.price}</h3>
           </div>
           <p>{item.ingredients}</p>
+        </div>
+      ))}
+      <h1>{menuCategories[0].title}</h1>
+      {menuCategories[0].menu_items.map((item) => (
+        <div key={item.id} item={item}>
+          <div className="menu-item-title-wrapper">
+            <h3>{item.title}</h3>
+            <h3>{item.price}</h3>
+          </div>
         </div>
       ))}
     </StyledCardCafeMenu>
