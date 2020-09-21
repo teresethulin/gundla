@@ -1,10 +1,13 @@
-import { getInstagramPictures } from "../lib/api";
-import InstagramGrid from "../components/InstagramGrid";
+import { getData, getInstagramPictures } from "../lib/api";
+import InstagramGrid from "../components/index/InstagramGrid";
+import CardWelcome from "../components/index/CardWelcome";
+import CardFindUs from "../components/index/CardFindUs";
 
-export default function Home({ pictures }) {
+export default function Home({ pictures, post }) {
   return (
     <div>
-      <h1>Välkommen</h1>
+      <CardWelcome post={post}></CardWelcome>
+      <CardFindUs post={post}></CardFindUs>
       <InstagramGrid pictures={pictures}></InstagramGrid>
     </div>
   );
@@ -12,8 +15,9 @@ export default function Home({ pictures }) {
 
 export async function getStaticProps() {
   const pictures = await getInstagramPictures("gundlagardscafe");
+  const post = await getData("/start");
 
   return {
-    props: { pictures },
+    props: { pictures, post },
   };
 }

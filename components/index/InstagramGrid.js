@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Link from "next/link";
 
 const InstaCard = styled.section`
   width: 100%;
