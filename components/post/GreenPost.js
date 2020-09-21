@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ReactHtmlParser from "react-html-parser";
 import { isTitle } from "../../functions/isTitle";
+import { isEmail } from "../../functions/isEmail";
 
 const Container = styled.div`
   width: 100%;
@@ -17,9 +18,7 @@ export default function GreenPost({ post, children, email }) {
       {isTitle(post.title)}
       {ReactHtmlParser(post.text)}
       {children}
-      <a href={`mailto:${email}`}>
-        <p style={{ textDecoration: "underline" }}>{email}</p>
-      </a>
+      {isEmail(email)}
     </Container>
   );
 }
