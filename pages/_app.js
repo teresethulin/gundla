@@ -2,9 +2,9 @@ import "../styles/globals.css";
 import Layout from "../components/layout";
 import { getData } from "../lib/api";
 
-function MyApp({ Component, pageProps, info }) {
+function MyApp({ Component, pageProps }) {
   return (
-    <Layout info={info} pageTitle="cool">
+    <Layout pageTitle="cool">
       <Component {...pageProps} />
     </Layout>
   );

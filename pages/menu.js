@@ -16,8 +16,8 @@ function Menu({ menuCategories, post }) {
 }
 
 export async function getStaticProps() {
-  const menuCategories = await getData("menu-categories");
-  const { post } = await getData("menu");
+  const menuCategories = await getData("/menu-categories");
+  const { post } = await getData("/menu");
 
   return {
     props: { menuCategories, post },

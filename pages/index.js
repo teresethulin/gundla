@@ -10,25 +10,26 @@ async function getInstagramPictures(profileName) {
   const jsonData = await response.json();
   const pictures = jsonData.graphql.user.edge_owner_to_timeline_media.edges;
 
-  if (response.ok) {
-    return pictures;
-  } else {
-    throw new Error(pictures);
-  }
+  return pictures;
+
+  // if (response.ok) {
+  //   return pictures;
+  // } else {
+  //   throw new Error(pictures);
+  // }
 }
 
-export default function Home({ info }) {
-  getInstagramPictures("gundlagardscafe")
-    .then((pictures) => console.log(pictures))
-    .catch((error) => console.error("Error:", error));
+export default function Home({ info, pictures }) {
+  console.log(pictures);
 
   return <h1>Välkommen</h1>;
 }
 
 export async function getStaticProps() {
-  const info = await getData("info");
+  const info = await getData("/info");
+  const pictures = await getInstagramPictures("gundlagardscafe");
 
   return {
-    props: { info },
+    props: { info, pictures },
   };
 }
