@@ -166,7 +166,7 @@ const Menu = () => {
             </Link>
           </StyledNavButton>
           <StyledNavButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/renting" as="/fest">
+            <Link href="/renting" as="/renting">
               <a>
                 <h3>Fest | Bröllop | Kalas</h3>
               </a>
