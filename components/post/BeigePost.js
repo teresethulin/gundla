@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { isEmail } from "../../functions/isEmail";
+import ReactHtmlParser from "react-html-parser";
 
 const Container = styled.div`
   width: 100%;
@@ -20,11 +22,12 @@ const Desc = styled.p`
   letter-spacing: 0.01em;
 `;
 
-export default function BeigePost({ post }) {
+export default function BeigePost({ post, mail }) {
   return (
     <Container>
       <Title>{post.title}</Title>
-      <Desc>{post.text}</Desc>
+      {ReactHtmlParser(post.text)}
+      {isEmail(mail)}
     </Container>
   );
 }

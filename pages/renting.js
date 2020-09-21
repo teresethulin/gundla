@@ -1,5 +1,21 @@
-function Renting() {
-  return <h1>Fest / Bröllop</h1>;
+import BeigePost from "../components/post/BeigePost";
+import { getData } from "../lib/api";
+import ImgGrid from "../components/ImgGrid";
+
+export default function Renting({ post, image, email }) {
+  return (
+    <div>
+      <BeigePost post={post} mail={email} />
+      <ImgGrid image={image} />
+    </div>
+  );
 }
 
-export default Renting;
+export async function getStaticProps() {
+  const { post, image } = await getData("/party");
+  const { email } = await getData("/info");
+
+  return {
+    props: { post, image, email },
+  };
+}
