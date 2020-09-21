@@ -59,7 +59,7 @@ const StyledFooterUl = styled.ul`
   }
 `;
 
-const Footer = ({ info }) => (
+const Footer = () => (
   <StyledFooter>
     <StyledFooterButtonContainer>
       <StyledFooterButton>
