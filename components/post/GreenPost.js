@@ -17,10 +17,6 @@ const Title = styled.h3`
   line-height: 102%;
 `;
 
-const Desc = styled.p`
-  letter-spacing: 0.01em;
-`;
-
 export default function GreenPost({ post }) {
   return (
     <Container>

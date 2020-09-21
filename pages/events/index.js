@@ -12,10 +12,10 @@ const List = styled.ul`
   padding: 0;
 `;
 
-export default function Events({ events, post }) {
+export default function Events({ events, post, first_post }) {
   return (
     <Container>
-      <GreenPost post={post[0]} />
+      <GreenPost post={first_post} />
       <EventInfo posts={post} />
       <List>
         {events.map((event) => (
@@ -28,9 +28,9 @@ export default function Events({ events, post }) {
 
 export async function getStaticProps() {
   const events = await getData("/events");
-  const { post } = await getData("/event-page");
+  const { post, first_post } = await getData("/event-page");
   return {
-    props: { events, post },
+    props: { events, post, first_post },
     revalidate: 30,
   };
 }
