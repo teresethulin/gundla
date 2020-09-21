@@ -70,6 +70,10 @@ export const DescInfo = styled.p`
   letter-spacing: 0.01em;
 `;
 
+export const Image = styled.img`
+  width: 100%;
+`;
+
 // Event.js
 
 export const CardEvent = styled.div`

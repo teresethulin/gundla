@@ -1,11 +1,5 @@
-import Layout from "../components/layout";
-
 function Catering() {
-  return (
-    <Layout pageTitle="Catering">
-      <h1>Catering</h1>
-    </Layout>
-  );
+  return <h1>Catering</h1>;
 }
 
 export default Catering;
