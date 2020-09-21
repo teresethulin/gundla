@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ReactHtmlParser from "react-html-parser";
+import { isTitle } from "../../functions/isTitle";
 
 const Container = styled.div`
   width: 100%;
@@ -10,18 +11,15 @@ const Container = styled.div`
   color: var(--main-bg-yellow);
 `;
 
-const Title = styled.h3`
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 102%;
-`;
-
-export default function GreenPost({ post }) {
+export default function GreenPost({ post, children, email }) {
   return (
     <Container>
-      <Title>{post.title}</Title>
+      {isTitle(post.title)}
       {ReactHtmlParser(post.text)}
+      {children}
+      <a href={`mailto:${email}`}>
+        <p style={{ textDecoration: "underline" }}>{email}</p>
+      </a>
     </Container>
   );
 }

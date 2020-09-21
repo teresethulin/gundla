@@ -11,7 +11,7 @@ const StyledContainer = styled.section`
   padding: 0 5vw;
 `;
 
-const Layout = ({ children, info, pageTitle = "" }) => (
+const Layout = ({ children, pageTitle = "" }) => (
   <main>
     <Head>
       <link
@@ -22,7 +22,7 @@ const Layout = ({ children, info, pageTitle = "" }) => (
     </Head>
     <Header></Header>
     <StyledContainer>{children}</StyledContainer>
-    <Footer info={info}></Footer>
+    <Footer></Footer>
   </main>
 );
 
