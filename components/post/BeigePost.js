@@ -18,10 +18,6 @@ const Title = styled.h1`
   line-height: 102%;
 `;
 
-const Desc = styled.p`
-  letter-spacing: 0.01em;
-`;
-
 export default function BeigePost({ post, mail }) {
   return (
     <Container>
