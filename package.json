@@ -17,6 +17,8 @@
     "next-images": "^1.5.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-html-parser": "^2.0.2",
+    "react-spring": "^8.0.27",
     "styled-components": "^5.2.0",
     "yup": "^0.29.3"
   },
