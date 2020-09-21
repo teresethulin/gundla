@@ -143,6 +143,7 @@ const Menu = () => {
               </a>
             </Link>
           </StyledNavButton>
+
           <StyledNavButton open={open} onClick={() => setOpen(!open)}>
             <Link href="/catering" as="/catering">
               <a>
