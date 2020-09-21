@@ -10,16 +10,14 @@ const Container = styled.ul`
 
 export default function BookEvent({ event }) {
   return (
-    <Layout pageTitle={event.slug}>
-      <Container>
-        <Booking event={event} />
-      </Container>
-    </Layout>
+    <Container>
+      <Booking event={event} />
+    </Container>
   );
 }
 
 export async function getStaticPaths() {
-  const events = await getData("events");
+  const events = await getData("/events");
   const paths = events.map((event) => ({
     params: { slug: event.slug },
   }));
@@ -28,7 +26,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const event = await getData(`events?slug=${params.slug}`);
+  const event = await getData(`/events?slug=${params.slug}`);
 
   return { props: { event: event[0] } };
 }

@@ -22,11 +22,7 @@ export default function Home({ info }) {
     .then((pictures) => console.log(pictures))
     .catch((error) => console.error("Error:", error));
 
-  return (
-    <Layout pageTitle="">
-      <h1>Välkommen</h1>
-    </Layout>
-  );
+  return <h1>Välkommen</h1>;
 }
 
 export async function getStaticProps() {
