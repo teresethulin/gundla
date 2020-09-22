@@ -1,3 +1,5 @@
+import { DesktopDivCenter } from "./style";
+
 export default function InfoPosts({ info }) {
   const posts = [
     {
@@ -22,26 +24,32 @@ export default function InfoPosts({ info }) {
       id: 3,
     },
   ];
-  return posts.map((post) => {
-    return (
-      <div
-        key={post.id}
-        style={{
-          display: "flex",
-          marginTop: 10,
-          marginLeft: 0,
-          marginBottom: 20,
-        }}
-      >
-        <img
-          style={{ marginRight: 20, width: 18 }}
-          src={post.logo}
-          alt={post.alt}
-        />
-        <a href={post.link}>
-          <p style={{ textDecoration: "underline", margin: 0 }}>{post.info}</p>
-        </a>
-      </div>
-    );
-  });
+  return (
+    <DesktopDivCenter>
+      {posts.map((post) => {
+        return (
+          <div
+            key={post.id}
+            style={{
+              display: "flex",
+              marginTop: 10,
+              marginLeft: 0,
+              marginBottom: 20,
+            }}
+          >
+            <img
+              style={{ marginRight: 20, width: 18 }}
+              src={post.logo}
+              alt={post.alt}
+            />
+            <a href={post.link}>
+              <p style={{ textDecoration: "underline", margin: 0 }}>
+                {post.info}
+              </p>
+            </a>
+          </div>
+        );
+      })}
+    </DesktopDivCenter>
+  );
 }
