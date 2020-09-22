@@ -1,5 +1,6 @@
 import { getData } from "../lib/api";
 import GreenPost from "../components/post/GreenPost";
+import GreenPostCenter from "../components/post/GreenPostCenter";
 import CateringMenu from "../components/catering/CateringMenu";
 import ReactHtmlParser from "react-html-parser";
 
@@ -8,9 +9,9 @@ export default function Catering({ post, menu_suggestion, bottom, email }) {
     <div>
       <GreenPost post={post} email={email} />
       <CateringMenu menu={menu_suggestion} />
-      <GreenPost post={bottom} email={email}>
+      <GreenPostCenter post={bottom} email={email}>
         {ReactHtmlParser(bottom)}
-      </GreenPost>
+      </GreenPostCenter>
     </div>
   );
 }

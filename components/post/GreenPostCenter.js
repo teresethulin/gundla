@@ -10,6 +10,12 @@ const Container = styled.div`
   background-color: var(--main-bg-green);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.16);
   color: var(--main-text-black);
+  @media (min-width: 768px) {
+    display: block;
+    text-align: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
+  }
 `;
 const Bar = styled.div`
   width: 100%;
