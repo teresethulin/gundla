@@ -9,6 +9,7 @@ export const Container = styled.div`
   font-weight: normal;
   font-size: 16px;
   line-height: 142%;
+  color: var(--main-text-color);
 `;
 
 export const Title = styled.h1`
