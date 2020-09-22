@@ -19,15 +19,11 @@ const Title = styled.h1`
   line-height: 106%;
 `;
 
-const Text = styled.p`
-  font-family: "Barlow";
-`;
-
 export default function CardWelcome({ post }) {
   return (
     <StyledCard>
       <Title>{post.post_two.title}</Title>
-      <Text>{ReactHtmlParser(post.post_two.text)}</Text>
+      {ReactHtmlParser(post.post_two.text)}
       <a href="">Öppna karta</a>
     </StyledCard>
   );

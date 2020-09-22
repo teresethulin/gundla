@@ -15,21 +15,18 @@ const Title = styled.h1`
   line-height: 106%;
 `;
 
-const Text = styled.p`
-  font-family: "Barlow";
-`;
-
 const Image = styled.img`
   width: 100%;
+  margin: 5vh 0 2vh;
 `;
 
 export default function CardWelcome({ post }) {
   return (
     <StyledCard>
       <Title>{post.post_one.title}</Title>
-      <Text>{ReactHtmlParser(post.post_one.text)}</Text>
+      {ReactHtmlParser(post.post_one.text)}
       <Image src={post.image.url} alt={post.image.alternativeText} />
-      <Text>{ReactHtmlParser(post.description)}</Text>
+      {ReactHtmlParser(post.description)}
     </StyledCard>
   );
 }
