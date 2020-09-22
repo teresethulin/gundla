@@ -5,23 +5,27 @@ export default function InfoPosts({ info }) {
       logo: "/assets/Vector-2.png",
       link: "",
       alt: "phone logo",
+      id: 1,
     },
     {
       info: info.email,
       logo: "/assets/Vector-3.png",
       link: "",
       alt: "email logo",
+      id: 2,
     },
     {
       info: info.address,
       logo: "/assets/Vector-1.png",
       link: "",
       alt: "maps logo",
+      id: 3,
     },
   ];
   return posts.map((post) => {
     return (
       <div
+        key={post.id}
         style={{
           display: "flex",
           marginTop: 10,
