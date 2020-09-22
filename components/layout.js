@@ -9,6 +9,9 @@ const StyledContainer = styled.section`
   width: 100%;
   height: auto;
   padding: 0 5vw;
+  @media (min-width: 768px) {
+    padding: 0 20vw;
+  }
 `;
 
 const Layout = ({ children, pageTitle = "" }) => (
