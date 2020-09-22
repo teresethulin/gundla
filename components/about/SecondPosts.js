@@ -1,11 +1,15 @@
 import ReactHtmlParser from "react-html-parser";
 import { imageFunc } from "../../functions/image";
 import { Container, Title } from "./style";
+import InfoPosts from "./InfoPosts";
 
 export default function SecondPosts({ posts, info }) {
   return (
     <Container
-      style={{ backgroundColor: "var(--main-bg-green)", color: "#fffcf1" }}
+      style={{
+        backgroundColor: "var(--main-bg-green)",
+        color: "var(--main-text-color)",
+      }}
     >
       {posts.map((post) => {
         return (
@@ -16,11 +20,7 @@ export default function SecondPosts({ posts, info }) {
           </div>
         );
       })}
-      <a href={`tel:${info.phone_number}`}>
-        <p style={{ textDecoration: "underline" }}>{info.phone_number}</p>
-      </a>
-      <p style={{ textDecoration: "underline" }}>{info.email}</p>
-      <p>{info.address}</p>
+      <InfoPosts info={info} />
     </Container>
   );
 }

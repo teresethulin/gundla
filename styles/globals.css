@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #fcfcfc;
+  background-color: #f1f1f1;
   font-family: "Barlow", sans-serif;
 }
 
@@ -23,6 +23,10 @@ a {
 }
 
 :root {
-  --main-bg-yellow: #fffcf1;
-  --main-bg-green: #4e746c;
+  --main-bg-blue: #aed8e5;
+  --main-bg-green: #b0e0bc;
+  --main-bg-black: #343434;
+  --main-bg-brown: #e6e3d9;
+  --main-text-color: #343434;
+  --main-text-white: #ffffff;
 }

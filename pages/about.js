@@ -5,7 +5,7 @@ import SecondPosts from "../components/about/SecondPosts";
 export default function About({ post, info }) {
   return (
     <div>
-      <FirstPosts posts={[post[0], post[1]]} map={info.address} />{" "}
+      <FirstPosts posts={[post[0], post[1]]} />{" "}
       <SecondPosts posts={[post[2], post[3]]} info={info} />
     </div>
   );
