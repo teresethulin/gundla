@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ReactHtmlParser from "react-html-parser";
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -58,37 +59,43 @@ const StyledFooterUl = styled.ul`
     letter-spacing: 0.01em;
   }
 `;
+const Bar = styled.div`
+  width: 100%;
+  height: 16px;
+  background-color: var(--main-bg-green);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.16);
+`;
 
-const Footer = () => (
-  <StyledFooter>
-    <StyledFooterButtonContainer>
-      <StyledFooterButton>
-        <a href="">Kontakta oss (Ring)</a>
-      </StyledFooterButton>
-      <StyledFooterButton>
-        <a href="">Kontakta oss (Mail)</a>
-      </StyledFooterButton>
-      <StyledFooterButton>
-        <a href="">Hitta hit (Google Maps)</a>
-      </StyledFooterButton>
-    </StyledFooterButtonContainer>
-    <StyledFooterLowerWrapper>
-      <StyledFooterUl>
-        <li>Måndag Stängt</li>
-        <li>Tis-Fre 11-17</li>
-        <li>Lördag 11-16</li>
-        <li>Söndag 12-16</li>
-      </StyledFooterUl>
-      <StyledFooterUl>
-        <li>
-          <a href="">Instagram</a>
-        </li>
-        <li>
-          <a href="">Facebook</a>
-        </li>
-      </StyledFooterUl>
-    </StyledFooterLowerWrapper>
-  </StyledFooter>
-);
+const Footer = ({ info, hours }) => {
+  return (
+    <>
+      <Bar />
+      <StyledFooter>
+        <StyledFooterButtonContainer>
+          <StyledFooterButton>
+            <a href="">Kontakta oss (Ring)</a>
+          </StyledFooterButton>
+          <StyledFooterButton>
+            <a href="">Kontakta oss (Mail)</a>
+          </StyledFooterButton>
+          <StyledFooterButton>
+            <a href="">Hitta hit (Google Maps)</a>
+          </StyledFooterButton>
+        </StyledFooterButtonContainer>
+        <StyledFooterLowerWrapper>
+          <StyledFooterUl>{ReactHtmlParser(hours)}</StyledFooterUl>
+          <StyledFooterUl>
+            <li>
+              <a href="">Instagram</a>
+            </li>
+            <li>
+              <a href="">Facebook</a>
+            </li>
+          </StyledFooterUl>
+        </StyledFooterLowerWrapper>
+      </StyledFooter>
+    </>
+  );
+};
 
 export default Footer;

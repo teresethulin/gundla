@@ -4,7 +4,7 @@ import { getData } from "../lib/api";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
+    <Layout info={pageProps.info} hours={pageProps.hours} pageTitle="cool">
       <Component {...pageProps} />
     </Layout>
   );

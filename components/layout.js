@@ -14,7 +14,7 @@ const StyledContainer = styled.section`
   }
 `;
 
-const Layout = ({ children, pageTitle = "" }) => (
+const Layout = ({ children, pageTitle = "", info, hours }) => (
   <main>
     <Head>
       <link
@@ -25,7 +25,7 @@ const Layout = ({ children, pageTitle = "" }) => (
     </Head>
     <Header></Header>
     <StyledContainer>{children}</StyledContainer>
-    <Footer></Footer>
+    <Footer info={info} hours={hours}></Footer>
   </main>
 );
 
