@@ -1,11 +1,11 @@
-import BeigePost from "../components/post/BeigePost";
+import BluePost from "../components/post/BluePost";
 import { getData } from "../lib/api";
 import ImgGrid from "../components/ImgGrid";
 
 export default function Renting({ post, image, email }) {
   return (
     <div>
-      <BeigePost post={post} mail={email} />
+      <BluePost post={post} mail={email} />
       <ImgGrid image={image} />
     </div>
   );

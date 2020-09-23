@@ -22,7 +22,7 @@ export default function ImgGrid({ image }) {
     <Container>
       <Img style={{ gridArea: "imgOne" }} src={image[0].url} />
       <Img style={{ gridArea: "imgTwo" }} src={image[1].url} />
-      <Img style={{ gridArea: "imgThree" }} src={image[1].url} />
+      <Img style={{ gridArea: "imgThree" }} src={image[2].url} />
     </Container>
   );
 }
