@@ -10,13 +10,20 @@ const Container = styled.ul`
 const List = styled.ul`
   margin: 0;
   padding: 0;
+  @media (min-width: 768px) {
+    margin: 15px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 25px;
+    gap: 40px;
+  }
 `;
 
-export default function Events({ events, post, first_post }) {
+export default function Events({ events, post, first_post, image }) {
   return (
     <Container>
       <GreenPost post={first_post} />
-      <EventInfo posts={post} />
+      <EventInfo posts={post} image={image} />
       <List>
         {events.map((event) => (
           <Event key={event.id} event={event} />
@@ -28,9 +35,9 @@ export default function Events({ events, post, first_post }) {
 
 export async function getStaticProps() {
   const events = await getData("/events");
-  const { post, first_post } = await getData("/event-page");
+  const { post, first_post, image } = await getData("/event-page");
   return {
-    props: { events, post, first_post },
+    props: { events, post, first_post, image },
     revalidate: 30,
   };
 }
