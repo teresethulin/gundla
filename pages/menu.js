@@ -1,25 +1,30 @@
 import { getData } from "../lib/api";
-import CardCafeMenu from "../components/cardcafemenu";
-import BeigePost from "../components/post/BeigePost";
+import styled from "styled-components";
+import GreenPost from "../components/post/GreenPost";
 
-function Menu({ menuCategories, post }) {
-  {
-    console.log(post);
+const Container = styled.section`
+  width: 100%;
+
+  img {
+    width: 100%;
+    margin: 5vh 0;
   }
+`;
+
+function Menu({ post }) {
   return (
-    <div>
-      <BeigePost post={post}></BeigePost>
-      <CardCafeMenu menuCategories={menuCategories}></CardCafeMenu>
-    </div>
+    <Container>
+      <GreenPost post={post}></GreenPost>
+      <img src={post.image.url} alt={post.image.alternativeText} />
+    </Container>
   );
 }
 
 export async function getStaticProps() {
-  const menuCategories = await getData("/menu-categories");
   const { post } = await getData("/menu");
 
   return {
-    props: { menuCategories, post },
+    props: { post },
   };
 }
 
