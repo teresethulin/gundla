@@ -1,13 +1,19 @@
 import { getData, getInstagramPictures } from "../lib/api";
+import Link from "next/link";
 import InstagramGrid from "../components/index/InstagramGrid";
 import CardWelcome from "../components/index/CardWelcome";
 import CardFindUs from "../components/index/CardFindUs";
+import ContainerImageLinks from "../components/index/ContainerImageLinks";
+import CardImageLink from "../components/index/ImageLinks";
+import OpeningHours from "../components/index/OpeningHours";
 
-export default function Home({ pictures, post }) {
+export default function Home({ pictures, post, imageLinks }) {
   return (
     <div>
       <CardWelcome post={post}></CardWelcome>
+      <CardImageLink imageLinks={imageLinks}></CardImageLink>
       <CardFindUs post={post}></CardFindUs>
+      <OpeningHours></OpeningHours>
       <InstagramGrid pictures={pictures}></InstagramGrid>
     </div>
   );
@@ -16,8 +22,9 @@ export default function Home({ pictures, post }) {
 export async function getStaticProps() {
   const pictures = await getInstagramPictures("gundlagardscafe");
   const post = await getData("/start");
+  const imageLinks = await getData("/image-links");
 
   return {
-    props: { pictures, post },
+    props: { pictures, post, imageLinks },
   };
 }

@@ -4,11 +4,9 @@ const InstaCard = styled.section`
   width: 100%;
   padding: 32px 22px;
   margin: 12px 0px;
-  background-color: #fffcf1;
-  color: #35610c;
+  color: var(--main-text-color);
   font-weight: 600;
   letter-spacing: 0.01em;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.16);
 
   a {
     text-decoration: underline;
@@ -19,8 +17,12 @@ const InstaCard = styled.section`
 const Title = styled.h1`
   font-style: normal;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 102%;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
 `;
 
 const StyledInstagramGrid = styled.div`
@@ -42,17 +44,12 @@ const StyledInstagramGrid = styled.div`
   }
 `;
 
-const WrapperAlignRight = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
-
 export default function InstagramGrid({ pictures }) {
   return (
     <InstaCard>
       <Title>
-        Följ oss på{" "}
-        <a href="https://www.instagram.com/gundlagardscafe/">Instagram</a>
+        Följ oss på Instagram @
+        <a href="https://www.instagram.com/gundlagardscafe/">gundlagardscafe</a>
       </Title>
       <a href="https://www.instagram.com/gundlagardscafe/">
         <StyledInstagramGrid>
@@ -66,14 +63,6 @@ export default function InstagramGrid({ pictures }) {
           ))}
         </StyledInstagramGrid>
       </a>
-      <WrapperAlignRight>
-        <Title>
-          @
-          <a href="https://www.instagram.com/gundlagardscafe/">
-            gundlagardscafe
-          </a>
-        </Title>
-      </WrapperAlignRight>
     </InstaCard>
   );
 }
