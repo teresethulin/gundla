@@ -14,9 +14,9 @@ export default MyApp;
 
 export async function getStaticProps() {
   const info = await getData("/info");
+  const hours = await getData("/opening-hours");
 
   return {
-    props: { info },
-    revalidate: 30,
+    props: { info, hours },
   };
 }
