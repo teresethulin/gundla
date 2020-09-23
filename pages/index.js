@@ -2,7 +2,7 @@ import { getData, getInstagramPictures } from "../lib/api";
 import InstagramGrid from "../components/index/InstagramGrid";
 import CardWelcome from "../components/index/CardWelcome";
 import CardFindUs from "../components/index/CardFindUs";
-import ImageLinks from "../components/index/ImageLinks";
+import ImageLinks from "../components/ImageLinks";
 import OpeningHours from "../components/index/OpeningHours";
 
 export default function Home({ pictures, post, imageLinks, hours }) {
