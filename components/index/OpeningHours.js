@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import ReactHtmlParser from "react-html-parser";
 
-const StyledHours = styled.section`
+const Container = styled.section`
   width: 100%;
   background-color: var(--main-bg-black);
   color: var(--main-text-white);
@@ -19,7 +20,7 @@ const Title = styled.p`
   }
 `;
 
-const List = styled.ul`
+const Hours = styled.div`
   text-transform: uppercase;
   list-style: none;
   text-align: center;
@@ -28,21 +29,16 @@ const List = styled.ul`
   line-height: 162%;
   letter-spacing: 0.04%;
 
-  li {
+  p {
     font-family: "Harmattan";
   }
 `;
 
-const OpeningHours = () => (
-  <StyledHours>
+const OpeningHours = ({ hours }) => (
+  <Container>
     <Title>Öppettider</Title>
-    <List>
-      <li>måndag • stängt</li>
-      <li>tis-fre • 11-17</li>
-      <li>lördag • 11-16</li>
-      <li>söndag • 12-16</li>
-    </List>
-  </StyledHours>
+    <Hours>{ReactHtmlParser(hours.hours)}</Hours>
+  </Container>
 );
 
 export default OpeningHours;
