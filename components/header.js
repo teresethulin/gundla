@@ -54,7 +54,7 @@ const Header = () => (
     <StyledHeader>
       <Link href="/">
         <a>
-          <img src="/assets/logo.png" alt="logo" />
+          <img src="/assets/logo.svg" alt="logo" />
         </a>
       </Link>
       <Menu></Menu>

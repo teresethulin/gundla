@@ -91,7 +91,7 @@ const LowerWrapper = styled.div`
   justify-content: space-between;
   align-items: flex-end;
   width: 100%;
-  height: 15vh;
+  height: 20vh;
   padding: 0;
 `;
 
@@ -107,6 +107,15 @@ const List = styled.ul`
     font-family: "Harmattan";
     font-weight: 400;
     letter-spacing: 0.01em;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    line-height: 1.6em;
+  }
+
+  img {
+    margin: 0 1vw 0 0;
+    padding: 0;
   }
 `;
 
@@ -127,25 +136,9 @@ const Menu = () => {
       <Nav open={open}>
         <ul className="button-container">
           <LinkButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/about" as="/about">
-              <a>
-                <h3>Om oss</h3>
-              </a>
-            </Link>
-          </LinkButton>
-
-          <LinkButton open={open} onClick={() => setOpen(!open)}>
             <Link href="/menu" as="/meny">
               <a>
-                <h3>Meny</h3>
-              </a>
-            </Link>
-          </LinkButton>
-
-          <LinkButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/catering" as="/catering">
-              <a>
-                <h3>Catering</h3>
+                <h3>Caféutbud</h3>
               </a>
             </Link>
           </LinkButton>
@@ -159,9 +152,25 @@ const Menu = () => {
           </LinkButton>
 
           <LinkButton open={open} onClick={() => setOpen(!open)}>
+            <Link href="/catering" as="/catering">
+              <a>
+                <h3>Catering</h3>
+              </a>
+            </Link>
+          </LinkButton>
+
+          <LinkButton open={open} onClick={() => setOpen(!open)}>
             <Link href="/renting" as="/renting">
               <a>
-                <h3>Fest | Bröllop | Kalas</h3>
+                <h3>Abonnera</h3>
+              </a>
+            </Link>
+          </LinkButton>
+
+          <LinkButton open={open} onClick={() => setOpen(!open)}>
+            <Link href="/about" as="/about">
+              <a>
+                <h3>Om oss | Kontakt</h3>
               </a>
             </Link>
           </LinkButton>
@@ -177,10 +186,16 @@ const Menu = () => {
 
           <List>
             <li>
-              <a href="">Instagram</a>
+              <a href="https://www.instagram.com/gundlagardscafe/">
+                <img src="/assets/instagram.svg" alt="Instagram" />
+                Instagram
+              </a>
             </li>
             <li>
-              <a href="">Facebook</a>
+              <a href="https://www.facebook.com/gundlagardscafe/">
+                <img src="/assets/facebook.svg" alt="Facebook" />
+                Facebook
+              </a>
             </li>
           </List>
         </LowerWrapper>
