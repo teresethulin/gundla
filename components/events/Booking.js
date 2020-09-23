@@ -13,14 +13,16 @@ import {
   Button,
   Input,
   ErrorMessage,
+  Bar,
 } from "./style";
 
 export default function Booking({ event }) {
   const [confirm, setConfirm] = useState(false);
 
   return (
-    <div>
+    <div style={{ marginBottom: 50 }}>
       <Notification state={confirm} />
+      <Bar />
       <ContainerBooking>
         <h2>Bokingsförfrågan</h2>
         <p style={{ marginBottom: 5, marginTop: 15 }}>
@@ -124,6 +126,7 @@ export default function Booking({ event }) {
           </Formik>
         </div>
       </ContainerBooking>
+      <Bar />
     </div>
   );
 }
