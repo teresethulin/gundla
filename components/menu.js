@@ -40,6 +40,9 @@ const MenuButton = styled.div`
 `;
 
 const Nav = styled.nav`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   text-transform: none;
   height: 100vh;
@@ -72,7 +75,7 @@ const LinkButton = styled.div`
   justify-content: center;
   align-items: center;
   color: #4a4a4a;
-  width: 100%;
+  width: 325px;
   height: 42px;
   margin: 0;
   border-radius: 2px;
@@ -93,6 +96,10 @@ const LowerWrapper = styled.div`
   width: 100%;
   height: 20vh;
   padding: 0;
+
+  @media (min-width: 768px) {
+    width: 330px;
+  }
 `;
 
 const List = styled.ul`
