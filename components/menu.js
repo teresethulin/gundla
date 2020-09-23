@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styled from "styled-components";
 
-const StyledBurger = styled.div`
+const Burger = styled.div`
   width: 18px;
   height: 18px;
   display: flex;
@@ -28,32 +28,30 @@ const StyledBurger = styled.div`
   }
 `;
 
-const StyledBurgerButton = styled.div`
+const MenuButton = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 93px;
   height: 34px;
   text-transform: none;
-  position: absolute;
-  right: 5vw;
-  bottom: 1vh;
   border-radius: 2px;
   box-shadow: 2px 2px 1px 0px rgba(74, 74, 74, 0.4);
 `;
 
-const StyledNav = styled.nav`
+const Nav = styled.nav`
   text-align: center;
   text-transform: none;
   height: 100vh;
   width: ${({ open }) => (open ? "100vw" : "0")};
-  top: 210px;
+  top: 150px;
   right: 0;
   overflow: hidden;
   transition: 0.4s;
   padding: ${({ open }) => (open ? "0 5vw" : "0")};
   position: absolute;
-  background-color: #fcfcfc;
+  background-color: #f1f1f1;
+  color: var(--main-text-black);
 
   .button-container {
     padding: 0;
@@ -69,7 +67,7 @@ const StyledNav = styled.nav`
   }
 `;
 
-const StyledNavButton = styled.div`
+const LinkButton = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +85,7 @@ const StyledNavButton = styled.div`
   }
 `;
 
-const StyledNavLowerWrapper = styled.div`
+const LowerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -95,10 +93,9 @@ const StyledNavLowerWrapper = styled.div`
   width: 100%;
   height: 15vh;
   padding: 0;
-  color: #35610c;
 `;
 
-const StyledNavUl = styled.ul`
+const List = styled.ul`
   list-style: none;
   line-height: 1.4em;
   text-align: left;
@@ -118,78 +115,76 @@ const Menu = () => {
 
   return (
     <div>
-      <StyledBurgerButton open={open} onClick={() => setOpen(!open)}>
+      <MenuButton open={open} onClick={() => setOpen(!open)}>
         Meny
-        <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <Burger open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />
           <div />
-        </StyledBurger>
-      </StyledBurgerButton>
+        </Burger>
+      </MenuButton>
 
-      <StyledNav open={open}>
+      <Nav open={open}>
         <ul className="button-container">
-          <StyledNavButton open={open} onClick={() => setOpen(!open)}>
+          <LinkButton open={open} onClick={() => setOpen(!open)}>
             <Link href="/about" as="/about">
               <a>
                 <h3>Om oss</h3>
               </a>
             </Link>
-          </StyledNavButton>
-          <StyledNavButton open={open} onClick={() => setOpen(!open)}>
+          </LinkButton>
+
+          <LinkButton open={open} onClick={() => setOpen(!open)}>
             <Link href="/menu" as="/meny">
               <a>
                 <h3>Meny</h3>
               </a>
             </Link>
-          </StyledNavButton>
+          </LinkButton>
 
-          <StyledNavButton open={open} onClick={() => setOpen(!open)}>
+          <LinkButton open={open} onClick={() => setOpen(!open)}>
             <Link href="/catering" as="/catering">
               <a>
                 <h3>Catering</h3>
               </a>
             </Link>
-          </StyledNavButton>
-          <StyledNavButton open={open} onClick={() => setOpen(!open)}>
+          </LinkButton>
+
+          <LinkButton open={open} onClick={() => setOpen(!open)}>
             <Link href="/events" as="/events">
               <a>
                 <h3>Event</h3>
               </a>
             </Link>
-          </StyledNavButton>
-          <StyledNavButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/booking" as="/boka">
-              <a>
-                <h3>Bokningsförfrågan</h3>
-              </a>
-            </Link>
-          </StyledNavButton>
-          <StyledNavButton open={open} onClick={() => setOpen(!open)}>
+          </LinkButton>
+
+          <LinkButton open={open} onClick={() => setOpen(!open)}>
             <Link href="/renting" as="/renting">
               <a>
                 <h3>Fest | Bröllop | Kalas</h3>
               </a>
             </Link>
-          </StyledNavButton>
+          </LinkButton>
         </ul>
-        <StyledNavLowerWrapper>
-          <StyledNavUl>
+
+        <LowerWrapper>
+          <List>
+            <li>Måndag - Stängt</li>
+            <li>Tis-Fre - 11-17</li>
+            <li>Lördag - 11-16</li>
+            <li>Söndag - 12-16</li>
+          </List>
+
+          <List>
             <li>
               <a href="">Instagram</a>
             </li>
             <li>
               <a href="">Facebook</a>
             </li>
-          </StyledNavUl>
-          <StyledNavUl>
-            <li>Måndag - Stängt</li>
-            <li>Tis-Fre - 11-17</li>
-            <li>Lördag - 11-16</li>
-            <li>Söndag - 12-16</li>
-          </StyledNavUl>
-        </StyledNavLowerWrapper>
-      </StyledNav>
+          </List>
+        </LowerWrapper>
+      </Nav>
     </div>
   );
 };

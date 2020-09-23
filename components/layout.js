@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 import styled from "styled-components";
 
 const StyledContainer = styled.section`
-  margin-top: 247px;
+  margin-top: 190px;
   width: 100%;
   height: auto;
   padding: 0 5vw;

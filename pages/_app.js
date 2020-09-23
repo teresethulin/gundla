@@ -4,7 +4,7 @@ import { getData } from "../lib/api";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout pageTitle="cool">
+    <Layout>
       <Component {...pageProps} />
     </Layout>
   );
@@ -14,8 +14,9 @@ export default MyApp;
 
 export async function getStaticProps() {
   const info = await getData("/info");
+  const hours = await getData("/opening-hours");
 
   return {
-    props: { info },
+    props: { info, hours },
   };
 }
