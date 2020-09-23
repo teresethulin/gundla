@@ -6,8 +6,8 @@ const Container = styled.div`
   width: 100%;
   padding: 32px 22px;
   margin: 0px;
-  background-color: #fffcf1;
-  color: #35610c;
+  background-color: var(--main-bg-blue);
+  color: var(--main-text-color);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.16);
   @media (min-width: 768px) {
     display: grid;

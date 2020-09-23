@@ -4,7 +4,7 @@ import { getData } from "../lib/api";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout pageTitle="cool">
+    <Layout info={pageProps.info} hours={pageProps.hours} pageTitle="cool">
       <Component {...pageProps} />
     </Layout>
   );
@@ -17,5 +17,6 @@ export async function getStaticProps() {
 
   return {
     props: { info },
+    revalidate: 30,
   };
 }

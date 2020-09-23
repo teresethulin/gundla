@@ -14,8 +14,9 @@ export default function About({ post, info }) {
 export async function getStaticProps() {
   const { post } = await getData("/about");
   const { email, phone_number, address } = await getData("/info");
+  const { hours } = await getData("/opening-hours");
   return {
-    props: { info: { email, phone_number, address }, post },
+    props: { info: { email, phone_number, address }, post, hours },
     revalidate: 30,
   };
 }
