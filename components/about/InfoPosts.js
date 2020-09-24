@@ -25,14 +25,14 @@ export default function InfoPosts({ info }) {
     },
   ];
   return (
-    <DesktopDivCenter>
+    <DesktopDivCenter style={{ marginTop: 50, marginBottom: 80 }}>
       {posts.map((post) => {
         return (
           <div
             key={post.id}
             style={{
               display: "flex",
-              marginTop: 10,
+              marginTop: 30,
               marginLeft: 0,
               marginBottom: 20,
             }}
