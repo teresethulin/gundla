@@ -1,4 +1,10 @@
-import { ContainerInfo, TitleInfo, Bar, DesktopImage } from "./style";
+import {
+  ContainerInfo,
+  TitleInfo,
+  Bar,
+  DesktopImage,
+  TextContainer,
+} from "./style";
 import { imageFunc } from "../../functions/image";
 import ReactHtmlParser from "react-html-parser";
 
@@ -11,7 +17,7 @@ export default function EventInfo({ posts, image }) {
         {posts.map((post) => (
           <div key={post.id}>
             <TitleInfo>{post.title}</TitleInfo>
-            {ReactHtmlParser(post.text)}
+            <TextContainer>{ReactHtmlParser(post.text)}</TextContainer>
             {imageFunc(post.image)}
           </div>
         ))}

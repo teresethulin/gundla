@@ -24,6 +24,16 @@ const Bar = styled.div`
   height: 16px;
   background-color: var(--main-bg-black);
 `;
+const TextContainer = styled.div`
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 142%;
+  p {
+    margin: 0px 0px 10px 0px;
+  }
+`;
 
 export default function GreenPost({ post, children, email }) {
   return (
@@ -32,10 +42,13 @@ export default function GreenPost({ post, children, email }) {
       <Container>
         <DesktopDiv>
           {isTitle(post.title)}
-          <div>{ReactHtmlParser(post.text)}</div>
+          <TextContainer>
+            {ReactHtmlParser(post.text)}
+
+            {isEmail(email)}
+          </TextContainer>
         </DesktopDiv>
         {children}
-        {isEmail(email)}
       </Container>
       <Bar />
     </>

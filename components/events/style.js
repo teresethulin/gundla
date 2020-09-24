@@ -68,6 +68,7 @@ export const ContainerInfo = styled.div`
   }
 `;
 export const TitleInfo = styled.h3`
+  margin: 20px 0px 5px 0px;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -75,6 +76,11 @@ export const TitleInfo = styled.h3`
 `;
 export const DescInfo = styled.p`
   letter-spacing: 0.01em;
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 142%;
 `;
 
 export const Image = styled.img`
@@ -95,6 +101,17 @@ export const DesktopImage = styled.img`
     display: block;
   }
 `;
+export const TextContainer = styled.div`
+  font-family: Barlow;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 142%;
+  margin-bottom: 50px;
+  p {
+    margin: 0px 0px 10px 0px;
+  }
+`;
 
 // Event.js
 
@@ -108,6 +125,21 @@ export const CardEvent = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 5px;
+  p {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 142%;
+  }
+  h3 {
+    font-family: Harmattan;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 106%;
+    margin-top: 0px;
+  }
 `;
 
 export const CatEvent = styled.p`

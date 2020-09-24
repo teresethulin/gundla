@@ -101,6 +101,19 @@ const FlexDiv = styled.div`
     height: 100%;
   }
 `;
+const Hours = styled.div`
+  text-transform: uppercase;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  font-weight: 600;
+  line-height: 162%;
+  letter-spacing: 0.04%;
+
+  p {
+    font-family: "Harmattan";
+  }
+`;
 
 const Footer = ({ info, hours }) => {
   return (
@@ -137,7 +150,7 @@ const Footer = ({ info, hours }) => {
         <StyledFooterLowerWrapper>
           <FlexDiv>
             <DesktopText>Öppetider</DesktopText>
-            {ReactHtmlParser(hours)}
+            <Hours>{ReactHtmlParser(hours)}</Hours>
           </FlexDiv>
           <FlexDiv>
             <DesktopText>Följ oss på sociala medier</DesktopText>

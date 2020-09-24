@@ -35,6 +35,13 @@ export const Bar = styled.div`
 `;
 
 export const DesktopDiv = styled.div`
+  p {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 142%;
+  }
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 30% 70%;
@@ -42,6 +49,13 @@ export const DesktopDiv = styled.div`
   }
 `;
 export const DesktopDivCenter = styled.div`
+  p {
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 142%;
+  }
   @media (min-width: 768px) {
     display: block;
     text-align: center;
@@ -51,6 +65,7 @@ export const DesktopDivCenter = styled.div`
 export const MapsIconFirst = styled.div`
   display: flex;
   margin-top: 10px;
+
   @media (min-width: 768px) {
   }
 `;
