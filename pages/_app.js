@@ -10,12 +10,3 @@ export default function MyApp({ Component, pageProps }) {
     </Layout>
   );
 }
-
-export async function getStaticProps() {
-  const info = await getData("/info");
-
-  return {
-    props: { info },
-    revalidate: 30,
-  };
-}
