@@ -42,6 +42,7 @@ const StyledFooterButton = styled.div`
   color: #fffcf1;
   @media (min-width: 768px) {
     height: auto;
+    display: block;
   }
 `;
 
@@ -54,7 +55,7 @@ const StyledFooterLowerWrapper = styled.div`
   height: 17vh;
   padding: 0;
   @media (min-width: 768px) {
-    align-content: center;
+    align-items: center;
     height: auto;
   }
 `;
@@ -83,6 +84,22 @@ const InfoICon = styled.img`
   width: 18px;
   margin-right: 10px;
 `;
+const DesktopText = styled.h3`
+  display: none;
+  @media (min-width: 768px) {
+    display: block;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 142%;
+  }
+`;
+const FlexDiv = styled.div`
+  @media (min-width: 768px) {
+    height: 100%;
+  }
+`;
 
 const Footer = ({ info, hours }) => {
   return (
@@ -90,6 +107,7 @@ const Footer = ({ info, hours }) => {
       <Bar />
       <StyledFooter>
         <StyledFooterButtonContainer>
+          <DesktopText>Kontakt</DesktopText>
           <StyledFooterButton>
             <InfoICon src="/assets/Vector-6.png"></InfoICon>
             <a
@@ -116,20 +134,29 @@ const Footer = ({ info, hours }) => {
           </StyledFooterButton>
         </StyledFooterButtonContainer>
         <StyledFooterLowerWrapper>
-          {ReactHtmlParser(hours)}
-          <StyledFooterUl>
-            <li style={{ display: "flex", alignItems: "center", margin: 10 }}>
-              <img
-                style={{ marginRight: 10 }}
-                src="/assets/instagram.png"
-              ></img>
-              <a href={info.instagram}>Instagram</a>
-            </li>
-            <li style={{ display: "flex", alignItems: "center", margin: 10 }}>
-              <img style={{ marginRight: 10 }} src="/assets/facebook.png"></img>
-              <a href={info.facebook}>Facebook</a>
-            </li>
-          </StyledFooterUl>
+          <FlexDiv>
+            <DesktopText>Öppetider</DesktopText>
+            {ReactHtmlParser(hours)}
+          </FlexDiv>
+          <FlexDiv>
+            <DesktopText>Följ oss på sociala medier</DesktopText>
+            <StyledFooterUl>
+              <li style={{ display: "flex", alignItems: "center", margin: 10 }}>
+                <img
+                  style={{ marginRight: 10 }}
+                  src="/assets/instagram.png"
+                ></img>
+                <a href={info.instagram}>Instagram</a>
+              </li>
+              <li style={{ display: "flex", alignItems: "center", margin: 10 }}>
+                <img
+                  style={{ marginRight: 10 }}
+                  src="/assets/facebook.png"
+                ></img>
+                <a href={info.facebook}>Facebook</a>
+              </li>
+            </StyledFooterUl>
+          </FlexDiv>
         </StyledFooterLowerWrapper>
       </StyledFooter>
     </>
