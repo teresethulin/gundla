@@ -27,6 +27,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const event = await getData(`/events?slug=${params.slug}`);
+  const info = await getData("/info");
 
-  return { props: { event: event[0] } };
+  return { props: { event: event[0], info } };
 }

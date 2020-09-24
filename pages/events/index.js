@@ -40,7 +40,7 @@ export async function getStaticProps() {
   const { hours } = await getData("/opening-hours");
 
   return {
-    props: { events, post, first_post, image, hours },
+    props: { events, post, first_post, image, hours, info },
     revalidate: 30,
   };
 }
