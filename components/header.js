@@ -12,6 +12,7 @@ const Container = styled.div`
   top: 0;
   margin: 0;
   padding: 0;
+  z-index: 10;
 `;
 
 const StyledHeader = styled.header`

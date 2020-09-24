@@ -37,6 +37,7 @@ const MenuButton = styled.div`
   text-transform: none;
   border-radius: 2px;
   box-shadow: 2px 2px 1px 0px rgba(74, 74, 74, 0.4);
+  cursor: pointer;
 `;
 
 const Nav = styled.nav`
@@ -82,6 +83,7 @@ const LinkButton = styled.div`
   border: 1px solid #6a6a6a;
   box-shadow: -1px -1px 4px 0px rgba(0, 0, 0, 0.3);
   z-index: 10;
+  cursor: pointer;
 
   h3 {
     margin: 0;
@@ -131,7 +133,6 @@ const Menu = () => {
 
   return (
     <div>
-      {console.log(open)}
       <MenuButton open={open} onClick={() => setOpen(!open)}>
         {open ? "Stäng" : "Meny"}
         <Burger open={open} onClick={() => setOpen(!open)}>
