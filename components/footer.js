@@ -78,6 +78,7 @@ const Bar = styled.div`
   height: 16px;
   background-color: var(--main-bg-green);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.16);
+  margin-top: 5vh;
 `;
 
 const InfoICon = styled.img`

@@ -21,7 +21,9 @@ export const Title = styled.h2`
   font-weight: bold;
   font-size: 25px;
   line-height: 102%;
+  margin-top: 5vh;
   @media (min-width: 768px) {
+    margin-top: 10vh;
     width: 70%;
   }
 `;
