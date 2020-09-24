@@ -33,6 +33,7 @@ export const Label = styled.label`
 export const Button = styled.button`
   width: 100%;
   height: 34px;
+  cursor: pointer;
 `;
 export const Input = styled(Field)`
   width: 100%;
@@ -133,6 +134,7 @@ export const ButtonEvent = styled.button`
   border: 1px solid #000000;
   box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.16);
   justify-self: end;
+  cursor: pointer;
 `;
 
 // Notification
