@@ -131,8 +131,9 @@ const Menu = () => {
 
   return (
     <div>
+      {console.log(open)}
       <MenuButton open={open} onClick={() => setOpen(!open)}>
-        Meny
+        {open ? "Stäng" : "Meny"}
         <Burger open={open} onClick={() => setOpen(!open)}>
           <div />
           <div />
@@ -142,45 +143,45 @@ const Menu = () => {
 
       <Nav open={open}>
         <ul className="button-container">
-          <LinkButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/menu" as="/meny">
-              <a>
+          <Link href="/menu" as="/meny">
+            <a>
+              <LinkButton open={open} onClick={() => setOpen(!open)}>
                 <h3>Caféutbud</h3>
-              </a>
-            </Link>
-          </LinkButton>
+              </LinkButton>
+            </a>
+          </Link>
 
-          <LinkButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/events" as="/events">
-              <a>
+          <Link href="/events" as="/events">
+            <a>
+              <LinkButton open={open} onClick={() => setOpen(!open)}>
                 <h3>Event</h3>
-              </a>
-            </Link>
-          </LinkButton>
+              </LinkButton>
+            </a>
+          </Link>
 
-          <LinkButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/catering" as="/catering">
-              <a>
+          <Link href="/catering" as="/catering">
+            <a>
+              <LinkButton open={open} onClick={() => setOpen(!open)}>
                 <h3>Catering</h3>
-              </a>
-            </Link>
-          </LinkButton>
+              </LinkButton>
+            </a>
+          </Link>
 
-          <LinkButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/renting" as="/renting">
-              <a>
+          <Link href="/renting" as="/renting">
+            <a>
+              <LinkButton open={open} onClick={() => setOpen(!open)}>
                 <h3>Abonnera</h3>
-              </a>
-            </Link>
-          </LinkButton>
+              </LinkButton>
+            </a>
+          </Link>
 
-          <LinkButton open={open} onClick={() => setOpen(!open)}>
-            <Link href="/about" as="/about">
-              <a>
+          <Link href="/about" as="/about">
+            <a>
+              <LinkButton open={open} onClick={() => setOpen(!open)}>
                 <h3>Om oss | Kontakt</h3>
-              </a>
-            </Link>
-          </LinkButton>
+              </LinkButton>
+            </a>
+          </Link>
         </ul>
 
         <LowerWrapper>

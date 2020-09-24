@@ -45,7 +45,7 @@ export default function CardWelcome({ post }) {
             </p>
           </a>
           <img
-            style={{ marginLeft: 10, width: 18 }}
+            style={{ marginLeft: 10, width: 18, height: 25 }}
             src="/assets/Vector-1.png"
             alt="google maps icon"
           />
