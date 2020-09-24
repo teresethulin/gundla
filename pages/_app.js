@@ -2,7 +2,8 @@ import "../styles/globals.css";
 import Layout from "../components/layout";
 import { getData } from "../lib/api";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
+  console.log(pageProps);
   return (
     <Layout info={pageProps.info} hours={pageProps.hours} pageTitle="cool">
       <Component {...pageProps} />
@@ -10,13 +11,11 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp;
-
 export async function getStaticProps() {
   const info = await getData("/info");
-  const hours = await getData("/opening-hours");
 
   return {
-    props: { info, hours },
+    props: { info },
+    revalidate: 30,
   };
 }

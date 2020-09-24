@@ -21,9 +21,10 @@ export async function getStaticProps() {
   const pictures = await getInstagramPictures("gundlagardscafe");
   const post = await getData("/start");
   const imageLinks = await getData("/image-links");
-  const hours = await getData("/opening-hours");
+  const { hours } = await getData("/opening-hours");
+  const info = await getData("/info");
 
   return {
-    props: { pictures, post, imageLinks, hours },
+    props: { pictures, post, imageLinks, hours, info },
   };
 }

@@ -34,11 +34,13 @@ const Hours = styled.div`
   }
 `;
 
-const OpeningHours = ({ hours }) => (
-  <Container>
-    <Title>Öppettider</Title>
-    <Hours>{ReactHtmlParser(hours.hours)}</Hours>
-  </Container>
-);
+const OpeningHours = ({ hours }) => {
+  return (
+    <Container>
+      <Title>Öppettider</Title>
+      <Hours>{ReactHtmlParser(hours)}</Hours>
+    </Container>
+  );
+};
 
 export default OpeningHours;
