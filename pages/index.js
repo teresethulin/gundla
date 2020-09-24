@@ -51,8 +51,8 @@ const Grid = styled.div`
 `;
 
 export default function Home({ post, imageLinks, hours }) {
-  const [instagram, setInstagram] = React.useState("");
-  React.useEffect(() => {
+  const [instagram, setInstagram] = useState("");
+  useEffect(() => {
     fetch("https://www.instagram.com/gundlagardscafe/?__a=1")
       .then((resp) => resp.json())
       .then((json) => setInstagram(json));
