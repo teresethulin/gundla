@@ -1,4 +1,5 @@
 import { getData, getInstagramPictures } from "../lib/api";
+import { useState, useEffect } from "react";
 import InstagramGrid from "../components/index/InstagramGrid";
 import CardWelcome from "../components/index/CardWelcome";
 import CardFindUs from "../components/index/CardFindUs";
