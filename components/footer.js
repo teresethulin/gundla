@@ -12,6 +12,12 @@ const StyledFooter = styled.footer`
   width: 100vw;
   height: 474px;
   bottom: 0;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    height: auto;
+    padding: 3vh 20vw;
+  }
 `;
 
 const StyledFooterButtonContainer = styled.div`
@@ -21,6 +27,9 @@ const StyledFooterButtonContainer = styled.div`
   align-items: space-evenly;
   width: 100%;
   height: 45vh;
+  @media (min-width: 768px) {
+    height: auto;
+  }
 `;
 
 const StyledFooterButton = styled.div`
@@ -29,11 +38,11 @@ const StyledFooterButton = styled.div`
   align-items: center;
   width: 100%;
   height: 42px;
-  margin: 2vh 0;
-  border-radius: 2px;
-  border: 1px solid #fffcf1;
+  margin: 1vh 0;
   color: #fffcf1;
-  box-shadow: -1px -1px 3px 0px rgba(0, 0, 0, 0.3);
+  @media (min-width: 768px) {
+    height: auto;
+  }
 `;
 
 const StyledFooterLowerWrapper = styled.div`
@@ -44,6 +53,10 @@ const StyledFooterLowerWrapper = styled.div`
   width: 100%;
   height: 17vh;
   padding: 0;
+  @media (min-width: 768px) {
+    align-content: center;
+    height: auto;
+  }
 `;
 
 const StyledFooterUl = styled.ul`
@@ -66,6 +79,11 @@ const Bar = styled.div`
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), 2px 2px 0px rgba(0, 0, 0, 0.16);
 `;
 
+const InfoICon = styled.img`
+  width: 18px;
+  margin-right: 10px;
+`;
+
 const Footer = ({ info, hours }) => {
   return (
     <>
@@ -73,23 +91,43 @@ const Footer = ({ info, hours }) => {
       <StyledFooter>
         <StyledFooterButtonContainer>
           <StyledFooterButton>
-            <a href="">Kontakta oss (Ring)</a>
+            <InfoICon src="/assets/Vector-6.png"></InfoICon>
+            <a
+              style={{ textDecoration: "underline" }}
+              href={`tel:${info.phone_number}`}
+            >
+              {info.phone_number}
+            </a>
           </StyledFooterButton>
           <StyledFooterButton>
-            <a href="">Kontakta oss (Mail)</a>
+            <InfoICon src="/assets/Vector-4.png"></InfoICon>
+            <a
+              style={{ textDecoration: "underline" }}
+              href={`mailto:${info.email}`}
+            >
+              {info.email}
+            </a>
           </StyledFooterButton>
           <StyledFooterButton>
-            <a href="">Hitta hit (Google Maps)</a>
+            <InfoICon src="/assets/Vector-5.png"></InfoICon>
+            <a style={{ textDecoration: "underline" }} href={info.address}>
+              {info.address}
+            </a>
           </StyledFooterButton>
         </StyledFooterButtonContainer>
         <StyledFooterLowerWrapper>
-          <StyledFooterUl>{ReactHtmlParser(hours)}</StyledFooterUl>
+          {ReactHtmlParser(hours)}
           <StyledFooterUl>
-            <li>
-              <a href="">Instagram</a>
+            <li style={{ display: "flex", alignItems: "center", margin: 10 }}>
+              <img
+                style={{ marginRight: 10 }}
+                src="/assets/instagram.png"
+              ></img>
+              <a href={info.instagram}>Instagram</a>
             </li>
-            <li>
-              <a href="">Facebook</a>
+            <li style={{ display: "flex", alignItems: "center", margin: 10 }}>
+              <img style={{ marginRight: 10 }} src="/assets/facebook.png"></img>
+              <a href={info.facebook}>Facebook</a>
             </li>
           </StyledFooterUl>
         </StyledFooterLowerWrapper>

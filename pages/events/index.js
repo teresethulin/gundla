@@ -36,8 +36,11 @@ export default function Events({ events, post, first_post, image }) {
 export async function getStaticProps() {
   const events = await getData("/events");
   const { post, first_post, image } = await getData("/event-page");
+  const info = await getData("/info");
+  const { hours } = await getData("/opening-hours");
+
   return {
-    props: { events, post, first_post, image },
+    props: { events, post, first_post, image, hours },
     revalidate: 30,
   };
 }

@@ -22,9 +22,11 @@ function Menu({ post }) {
 
 export async function getStaticProps() {
   const { post } = await getData("/menu");
+  const info = await getData("/info");
+  const { hours } = await getData("/opening-hours");
 
   return {
-    props: { post },
+    props: { post, info, hours },
   };
 }
 

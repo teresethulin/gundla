@@ -4,10 +4,10 @@ import GreenPostCenter from "../components/post/GreenPostCenter";
 import CateringMenu from "../components/catering/CateringMenu";
 import ReactHtmlParser from "react-html-parser";
 
-export default function Catering({ post, menu_suggestion, bottom, email }) {
+export default function Catering({ post, menu_suggestion, bottom, info }) {
   return (
     <div>
-      <GreenPost post={post} email={email} />
+      <GreenPost post={post} email={info.email} />
       <CateringMenu menu={menu_suggestion} />
       <GreenPostCenter post={bottom} email={email}>
         {ReactHtmlParser(bottom)}
@@ -18,9 +18,11 @@ export default function Catering({ post, menu_suggestion, bottom, email }) {
 
 export async function getStaticProps() {
   const { post, menu_suggestion, bottom } = await getData("/catering");
-  const { email } = await getData("/info");
+  const info = await getData("/info");
+  const { hours } = await getData("/opening-hours");
+
   return {
-    props: { post, menu_suggestion, bottom, email },
+    props: { post, menu_suggestion, bottom, info, hours },
     revalidate: 30,
   };
 }
