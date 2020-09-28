@@ -19,7 +19,7 @@ const StyledCard = styled.section`
   justify-content: flex-end;
   align-items: flex-end;
   width: 100%;
-  height: 193px;
+  height: 194px;
   background-color: var(--main-bg-black);
   margin: 3vh 0;
 
